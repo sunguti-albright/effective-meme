@@ -1,4 +1,4 @@
-import {findAllCourses, findAllUsers, findLessonsForCourse} from './db-data';
+import {findAllCourses, findAllUsers, findLessonsForCourse} from './src/db-data';
 
 const util = require('util');
 
@@ -25,7 +25,7 @@ var ObjectId = require('mongodb').ObjectID;
 *
 *****************************************************************************************************/
 
-const MONGODB_CONNECTION_URL = 'mongodb+srv://nestjs:ZeEjdswOWHwoenQO@cluster0-dbucq.gcp.mongodb.net';
+const MONGODB_CONNECTION_URL = "mongodb+srv://sungutialbright:travisasutsa01@projectzero.alef7z5.mongodb.net/?retryWrites=true&w=majority";
 
 // Database Name
 const dbName = 'nestjs-course';
