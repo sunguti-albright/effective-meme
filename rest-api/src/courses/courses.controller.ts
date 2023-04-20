@@ -1,11 +1,15 @@
-import { Controller, Get } from "@nestjs/common";
+import { Controller, Get } from '@nestjs/common';
+import { findAllCourses } from 'src/db-data';
+import { Course } from 'src/shared/course';
+
 
 
 @Controller()
-export class CoursesController{
-
-    @Get('api/hello-world')
-    async helloWorld(): Promise<string>{
-        return 'hello world!!'
-    }
+export class CoursesController {
+  @Get('api/courses')
+  async getAllCourses(): Promise<any> {
+    //get data from mongo-db
+    
+    return findAllCourses();
+  }
 }
