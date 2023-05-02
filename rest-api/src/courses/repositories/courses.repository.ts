@@ -23,8 +23,8 @@ export class CoursesRepository{
         // return this.courseModel.updateOne(id, changes);
     }
 
-    async deleteOne() : Promise<Course[]>{
-        return
+    async deleteOne(id:string) : Promise<any>{
+        return this.courseModel.findByIdAndDelete({_id:id})
     }
 
 }
