@@ -1,0 +1,1 @@
+export const CONNECTION_STRING = "mongodb+srv://sungutialbright:travisasutsa01@projectzero.alef7z5.mongodb.net/nestjs-course?retryWrites=true&w=majority";
