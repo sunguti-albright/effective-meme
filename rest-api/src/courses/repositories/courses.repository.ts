@@ -18,8 +18,9 @@ export class CoursesRepository{
         return this.courseModel.find();
     }
 
-    async updateOne() : Promise<Course[]>{
-        return
+    async updateOne(id:string, changes:Partial<Course>) : Promise<Course>{
+      return  this.courseModel.findOneAndUpdate({_id: id}, changes,{new:true})
+        // return this.courseModel.updateOne(id, changes);
     }
 
     async deleteOne() : Promise<Course[]>{
