@@ -1,5 +1,6 @@
 import * as mongoose from 'mongoose';
 
+// const mongoose = require('mongoose')
 export const CoursesSchema = new mongoose.Schema({
   seqNo: Number,
   url: String,
