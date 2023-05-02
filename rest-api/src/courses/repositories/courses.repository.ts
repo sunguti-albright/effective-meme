@@ -8,11 +8,8 @@ import { Course } from "src/shared/course";
 @Injectable()
 export class CoursesRepository{
 
-    constructor(@InjectModel('Course')private courseModel : Model<Course>){}
-
-   async findOne() : Promise<Course[]>{
-        return
-    }
+  async createCourse(course: Partial<Course>): Promise<Course> {
+    const newCourse = new this.courseModel(course);
 
     async findAll() : Promise<Course[]>{
         return this.courseModel.find();
