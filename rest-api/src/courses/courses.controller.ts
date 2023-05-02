@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, Put } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Put } from '@nestjs/common';
 import { Course } from 'src/shared/course';
 import { CoursesRepository } from './repositories/courses.repository';
 
@@ -25,5 +25,12 @@ export class CoursesController {
     @Body() changes: Partial<Course>,
   ): Promise<Course> {
     return this.courseRepo.updateOne(courseId, changes)
+  }
+
+  @Delete(':courseId')
+  async deleteCourse(
+    @Param('courseId') courseId: string
+  ): Promise<any>{
+    return this.courseRepo.deleteOne(courseId)
   }
 }
