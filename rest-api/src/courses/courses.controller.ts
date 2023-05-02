@@ -23,5 +23,7 @@ export class CoursesController {
   async updateCourse(
     @Param('courseId') courseId: string,
     @Body() changes: Partial<Course>,
-  ) {}
+  ): Promise<Course> {
+    return this.courseRepo.updateOne(courseId, changes)
+  }
 }
